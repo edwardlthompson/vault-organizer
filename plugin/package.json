@@ -20,16 +20,16 @@
     "foss"
   ],
   "devDependencies": {
-    "@types/node": "^22.13.10",
-    "builtin-modules": "^4.0.0",
-    "esbuild": "^0.25.1",
+    "@types/node": "^26.1.2",
+    "builtin-modules": "^5.3.0",
+    "esbuild": "^0.28.1",
     "obsidian": "^1.8.7",
     "tsx": "^4.23.7",
-    "typescript": "^5.8.2",
-    "vitest": "^3.0.9"
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
   },
   "dependencies": {
-    "@huggingface/transformers": "^3.4.2"
+    "@huggingface/transformers": "^4.2.0"
   },
   "overrides": {
     "sharp": ">=0.35.0"
