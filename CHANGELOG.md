@@ -15,6 +15,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.15.3](https://github.com/edwardlthompson/vault-organizer/compare/v0.15.2...v0.15.3) (2026-08-06)
+
+
+### Fixed
+
+* **ci:** gate Android jobs on stack-presence; drop CodeQL Android matrix ([bc26963](https://github.com/edwardlthompson/vault-organizer/commit/bc26963260afa927a2b7a9cdd87a0edb184b694e))
+* **ci:** skip pruned web/android jobs; gate on active stack ([a6ea885](https://github.com/edwardlthompson/vault-organizer/commit/a6ea88582ad736e0f6d9133724541aaecceb1bba))
+* **hygiene:** stop tracking ORT WASM and tokenizer.json (&gt;500KB) ([780e8d2](https://github.com/edwardlthompson/vault-organizer/commit/780e8d2d6be061bc2193fa90d7de9aaf49010dc3))
+* **security:** override sharp &gt;=0.35.0 for Trivy libvips CVEs ([191588e](https://github.com/edwardlthompson/vault-organizer/commit/191588e24d91f7d8af4889435c261f017cd1419f))
+
+
+### Changed
+
+* **deps:** Bump the node-dependencies group ([#1](https://github.com/edwardlthompson/vault-organizer/issues/1)) ([8ceabd8](https://github.com/edwardlthompson/vault-organizer/commit/8ceabd8d812c8bf2b9ab41a07c88cef882c3ce39))
+* **release:** prepare v0.1.0 Vault Organizer initial publish ([828f776](https://github.com/edwardlthompson/vault-organizer/commit/828f776de8446be80cb199eaaa3906012bdcedc7))
+
+
+### Documentation
+
+* archive release 0.1.0 in COMPLETED_TASKS ([157907e](https://github.com/edwardlthompson/vault-organizer/commit/157907e9d822c042e30e72d23469e40cebf24ec0))
+
 ## [0.15.2](https://github.com/edwardlthompson/agent-project-bootstrap/compare/v0.15.1...v0.15.2) (2026-08-01)
 
 
