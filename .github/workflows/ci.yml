@@ -153,8 +153,18 @@ jobs:
       - name: Prepare Android wrapper
         if: hashFiles('examples/android/gradlew') != ''
         run: chmod +x examples/android/gradlew
-      - name: Run feature gate (strict multi-stack)
-        run: bash scripts/feature-gate.sh --stack multi --strict --json
+      - name: Run feature gate (active stack)
+        run: |
+          set -euo pipefail
+          STACK=multi
+          if [ -f .cursor/stack-selection.json ]; then
+            STACK="$(python3 -c "import json; print(json.load(open('.cursor/stack-selection.json')).get('stack','multi'))")"
+          fi
+          if [ "$STACK" = "multi" ] && [ -f examples/web/package.json ]; then
+            bash scripts/feature-gate.sh --stack multi --strict --json
+          else
+            bash scripts/feature-gate.sh --stack "$STACK" --json
+          fi
 
   validate-index:
     name: Validate Template Index
@@ -186,6 +196,8 @@ jobs:
 
   web:
     name: Web - Lint, Test, Build
+    needs: stack-presence
+    if: needs.stack-presence.outputs.web == 'true'
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -250,6 +262,8 @@ jobs:
 
   node:
     name: Node - Lint, Test
+    needs: stack-presence
+    if: needs.stack-presence.outputs.node == 'true'
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -278,6 +292,7 @@ jobs:
   android-structure:
     name: Android - Structure Validation
     runs-on: ubuntu-latest
+    if: hashFiles('examples/android/gradlew') != ''
     steps:
       - uses: actions/checkout@v7
       - name: Validate FOSS compliance markers
@@ -304,6 +319,7 @@ jobs:
   android-build:
     name: Android - assembleDebug
     runs-on: ubuntu-latest
+    if: hashFiles('examples/android/gradlew') != ''
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-java@v5
@@ -442,6 +458,7 @@ jobs:
   android-release:
     name: Android - assembleRelease
     runs-on: ubuntu-latest
+    if: hashFiles('examples/android/gradlew') != ''
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-java@v5

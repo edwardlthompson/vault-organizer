@@ -25,8 +25,9 @@
 
 | Status | Task |
 |--------|------|
-| 🔲 | [HUMAN] Publish GitHub Release `0.1.0` with slim assets + full/models zips |
-| 🔲 | [HUMAN] Submit plugin at [community.obsidian.md](https://community.obsidian.md) after release |
+| ✅ | [AGENT] Publish GitHub Release `0.1.0` with slim + full + models zips |
+| 🔲 | [HUMAN] Submit plugin at [community.obsidian.md](https://community.obsidian.md) |
+| 🔲 | [HUMAN] Enable Actions setting: allow GITHUB_TOKEN to create/approve PRs (Release Please) |
 
 ### Parallel
 
@@ -34,8 +35,8 @@
 
 | Task | Owner | Scope |
 |------|-------|-------|
-| Publish GitHub Release 0.1.0 | HUMAN | `dist/release/**` |
 | Community plugin submission | HUMAN | `manifest.json` |
+| Enable Release Please PR permission | HUMAN | `.github/workflows/release-please.yml` |
 
 ## Model leaderboard
 
