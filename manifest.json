@@ -1,0 +1,11 @@
+{
+  "id": "vault-organizer",
+  "name": "Vault Organizer",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Offline local AI that auto-tags, categorizes, and folders notes using a baked-in embedding sorter.",
+  "author": "edwardlthompson",
+  "authorUrl": "https://github.com/edwardlthompson",
+  "isDesktopOnly": true,
+  "license": "MIT"
+}

@@ -1,0 +1,43 @@
+name: Plugin CI
+
+on:
+  push:
+    paths:
+      - "plugin/**"
+      - "models/**"
+      - "scripts/score-model-leaderboard.py"
+      - ".github/workflows/plugin-ci.yml"
+  pull_request:
+    paths:
+      - "plugin/**"
+      - "models/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: plugin
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: plugin/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      - name: Enforce main.js Sync soft limit
+        run: |
+          SIZE=$(wc -c < main.js)
+          echo "main.js bytes=$SIZE"
+          # Soft Sync Standard threshold ~5 MiB
+          test "$SIZE" -lt 5242880
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Leaderboard smoke
+        working-directory: .
+        run: python scripts/score-model-leaderboard.py

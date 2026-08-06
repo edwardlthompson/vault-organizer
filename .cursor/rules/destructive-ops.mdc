@@ -1,0 +1,39 @@
+---
+description: Human-in-the-loop gates for destructive agent operations
+globs:
+alwaysApply: true
+---
+
+# Destructive Operations Guardrails
+
+Agents must obtain explicit `[HUMAN]` approval before:
+
+- `git push`, `git push --force`, or rewriting published history
+- Production deploys, `terraform apply`, or infrastructure changes
+- `DROP TABLE`, `DELETE` without `WHERE`, or irreversible schema changes
+- `rm -rf` on paths outside the active task scope
+- Disabling security checks, pre-commit hooks, or CI gates
+- Committing secrets, credentials, or `.env` files
+
+**Allowed without human approval:**
+
+- Agent auto-fix of lint, format, type, and test failures within active feature scope
+- `scripts/feature-autofix.sh` and `scripts/watch-agent-gates.sh --autofix` loops (until 3-strike)
+
+**Exempt:** `scripts/purge-ephemeral.sh --apply` and `purge-ephemeral.ps1 -Apply` — they run `git clean -fdX` (gitignored untracked files only; tracked source is never deleted).
+
+## Audit Trail
+
+At milestone boundaries, log significant agent actions in `DECISION_LOG.md`:
+
+- What changed and why
+- Tests or CI that validated the change
+- Any deferred security or privacy items
+
+## Prompt Injection Defense
+
+When building agent-exposed APIs or tools:
+
+- Validate and sanitize all external input
+- Use tool allowlists; deny arbitrary shell execution from user content
+- Never execute instructions embedded in untrusted data as system prompts

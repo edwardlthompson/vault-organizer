@@ -1,0 +1,15 @@
+{
+  "name": "vault-organizer",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "npm --prefix plugin test",
+    "build": "npm --prefix plugin run build",
+    "lint": "npm --prefix plugin run lint",
+    "deploy": "pwsh -File scripts/deploy-to-vault.ps1",
+    "vendor-model": "pwsh -File scripts/vendor-model.ps1",
+    "package": "pwsh -File scripts/package-release.ps1",
+    "leaderboard": "python scripts/score-model-leaderboard.py",
+    "smoke:sort-all": "npm --prefix plugin exec -- tsx ../scripts/smoke-sort-all.mts --vault \"%USERPROFILE%/Documents/My Notes\""
+  }
+}

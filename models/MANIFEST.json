@@ -1,0 +1,36 @@
+{
+  "defaultPack": "arctic-embed-m",
+  "packs": {
+    "arctic-embed-m": {
+      "id": "arctic-embed-m",
+      "hfRepo": "Snowflake/snowflake-arctic-embed-m",
+      "license": "Apache-2.0",
+      "role": "default",
+      "mtebRetrievalNdcg10": 54.9,
+      "requiredFiles": [
+        "config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "onnx/model_quantized.onnx"
+      ]
+    },
+    "arctic-embed-s": {
+      "id": "arctic-embed-s",
+      "hfRepo": "Snowflake/snowflake-arctic-embed-s",
+      "license": "Apache-2.0",
+      "role": "low-ram-fallback",
+      "mtebRetrievalNdcg10": 51.98
+    },
+    "arctic-embed-l": {
+      "id": "arctic-embed-l",
+      "hfRepo": "Snowflake/snowflake-arctic-embed-l",
+      "license": "Apache-2.0",
+      "role": "max-accuracy-optional",
+      "mtebRetrievalNdcg10": 55.98
+    }
+  },
+  "policy": {
+    "runtimeNetwork": false,
+    "pinChanges": "human-approved-only"
+  }
+}
