@@ -10,6 +10,7 @@
 - ✅ [AGENT] Update README for themes, manual pin, dead links, marketplace caveats (F-004)
 - ✅ [AGENT] Create GitHub repo + initial commit/push for ship (F-002)
 - ✅ [HUMAN] Create GitHub repo `edwardlthompson/vault-organizer`, push, Dependabot alerts
+- ✅ [AGENT] Publish GitHub Release `0.1.0` with slim + full + models zips
 
 ## v0.15.2 release (2026-08-01)
 
