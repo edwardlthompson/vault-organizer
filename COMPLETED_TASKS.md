@@ -2,6 +2,15 @@
 
 > Archive of finished BUILD_PLAN items.
 
+## Review sprint — 2026-08-05 audit (2026-08-05)
+
+- ✅ [AGENT] Index plugin-ci + model-leaderboard workflows in TEMPLATE_INDEX.json (F-003)
+- ✅ [AGENT] Fix BUILD_PLAN Parallel structure for Sprints 0–4 (F-003)
+- ✅ [AGENT] Set `isDesktopOnly: true` + root `manifest.json`/`versions.json` for marketplace (F-001)
+- ✅ [AGENT] Update README for themes, manual pin, dead links, marketplace caveats (F-004)
+- ✅ [AGENT] Create GitHub repo + initial commit/push for ship (F-002)
+- ✅ [HUMAN] Create GitHub repo `edwardlthompson/vault-organizer`, push, Dependabot alerts
+
 ## v0.15.2 release (2026-08-01)
 
 - ✅ [AUTO] Merge Release Please PR #50 — [v0.15.2](https://github.com/edwardlthompson/agent-project-bootstrap/releases/tag/v0.15.2) published @ `634d06d`

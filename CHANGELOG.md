@@ -37,7 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-* **security:** bump npm overrides — `examples/web` `js-yaml` >=5.2.2 and `brace-expansion` >=5.0.8; `examples/node` `postcss` >=8.5.18 (source map path traversal)
+* **security:** bump npm overrides — `examples/web` `js-yaml` >=5.2.2 and `brace-expansion` >=5.0.8; `examples/node` `postcss` >=8.5.18 (source map path traversal); `plugin` `sharp` >=0.35.0 (libvips CVEs)
 
 ### Changed
 
