@@ -13,8 +13,8 @@ jobs:
   score:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Score candidates
@@ -40,7 +40,7 @@ jobs:
           git push
       - name: Open leapfrog issue
         if: steps.leap.outputs.has_leap == 'true'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const leaps = '${{ steps.leap.outputs.leaps }}';
