@@ -21,6 +21,12 @@ if (-not $SkipBuild) {
   Pop-Location
 }
 
+# Large WASM/tokenizer files are gitignored — vendor when missing
+$wasmProbe = Join-Path $PluginSrc "wasm\ort-wasm-simd-threaded.wasm"
+if (-not (Test-Path $wasmProbe)) {
+  & (Join-Path $Root "scripts\vendor-ort-wasm.ps1")
+}
+
 $dest = Join-Path $VaultPath ".obsidian\plugins\$PluginId"
 New-Item -ItemType Directory -Force -Path $dest | Out-Null
 New-Item -ItemType Directory -Force -Path (Join-Path $VaultPath "Inbox") | Out-Null

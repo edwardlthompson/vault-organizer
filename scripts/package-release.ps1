@@ -13,6 +13,12 @@ npm run build
 if ($LASTEXITCODE -ne 0) { throw "build failed" }
 Pop-Location
 
+# Ensure ORT WASM + model tokenizer exist for full package (gitignored large binaries)
+& (Join-Path $Root "scripts\vendor-ort-wasm.ps1")
+if (-not (Test-Path (Join-Path $Plugin "models\arctic-embed-m\onnx\model_quantized.onnx"))) {
+  Write-Host "ONNX missing — run scripts/vendor-model.ps1 for a complete full zip" -ForegroundColor Yellow
+}
+
 $slim = Join-Path $Dist "slim"
 $full = Join-Path $Dist "full"
 Remove-Item $slim, $full -Recurse -Force -ErrorAction SilentlyContinue

@@ -76,6 +76,8 @@ plugin/main.js
 plugin/main.js.map
 plugin/data.json
 plugin/models/**/*.onnx
+plugin/models/**/tokenizer.json
+plugin/wasm/*.wasm
 plugin/node_modules/
 models/leaderboard.json
 

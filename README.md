@@ -56,6 +56,8 @@ Empty folders the plugin created may be pruned. Folders you created are left alo
 ```powershell
 cd plugin
 npm install
+pwsh ../scripts/vendor-ort-wasm.ps1   # large ORT WASM (gitignored)
+pwsh ../scripts/vendor-model.ps1      # ONNX + tokenizer (gitignored)
 npm test
 npm run build
 pwsh ../scripts/deploy-to-vault.ps1
