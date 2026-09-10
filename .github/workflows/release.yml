@@ -92,7 +92,7 @@ jobs:
         run: bash scripts/pre-release-gate.sh
 
       - name: Generate root SBOM
-        uses: anchore/sbom-action@e22c389904149dbc22b58101806040fa8d37a610 # v0.20.6
+        uses: anchore/sbom-action@3ad7283483fc7af8ff2b4ea19663c2d5ca935e26 # v0.20.6
         with:
           path: .
           format: cyclonedx-json
@@ -100,7 +100,7 @@ jobs:
 
       - name: Generate web stack SBOM slice
         if: hashFiles('examples/web/package.json') != ''
-        uses: anchore/sbom-action@e22c389904149dbc22b58101806040fa8d37a610 # v0.20.6
+        uses: anchore/sbom-action@3ad7283483fc7af8ff2b4ea19663c2d5ca935e26 # v0.20.6
         with:
           path: examples/web
           format: cyclonedx-json
@@ -108,7 +108,7 @@ jobs:
 
       - name: Generate python stack SBOM slice
         if: hashFiles('examples/python/pyproject.toml') != ''
-        uses: anchore/sbom-action@e22c389904149dbc22b58101806040fa8d37a610 # v0.20.6
+        uses: anchore/sbom-action@3ad7283483fc7af8ff2b4ea19663c2d5ca935e26 # v0.20.6
         with:
           path: examples/python
           format: cyclonedx-json
@@ -116,7 +116,7 @@ jobs:
 
       - name: Generate node stack SBOM slice
         if: hashFiles('examples/node/package.json') != ''
-        uses: anchore/sbom-action@e22c389904149dbc22b58101806040fa8d37a610 # v0.20.6
+        uses: anchore/sbom-action@3ad7283483fc7af8ff2b4ea19663c2d5ca935e26 # v0.20.6
         with:
           path: examples/node
           format: cyclonedx-json
@@ -124,7 +124,7 @@ jobs:
 
       - name: Generate android stack SBOM slice
         if: hashFiles('examples/android/app/build.gradle.kts') != ''
-        uses: anchore/sbom-action@e22c389904149dbc22b58101806040fa8d37a610 # v0.20.6
+        uses: anchore/sbom-action@3ad7283483fc7af8ff2b4ea19663c2d5ca935e26 # v0.20.6
         with:
           path: examples/android
           format: cyclonedx-json
@@ -132,7 +132,7 @@ jobs:
 
       - name: Generate rust stack SBOM slice
         if: hashFiles('examples/rust/Cargo.lock') != ''
-        uses: anchore/sbom-action@e22c389904149dbc22b58101806040fa8d37a610 # v0.20.6
+        uses: anchore/sbom-action@3ad7283483fc7af8ff2b4ea19663c2d5ca935e26 # v0.20.6
         with:
           path: examples/rust
           format: cyclonedx-json
@@ -140,7 +140,7 @@ jobs:
 
       - name: Generate go stack SBOM slice
         if: hashFiles('examples/go/go.sum') != ''
-        uses: anchore/sbom-action@e22c389904149dbc22b58101806040fa8d37a610 # v0.20.6
+        uses: anchore/sbom-action@3ad7283483fc7af8ff2b4ea19663c2d5ca935e26 # v0.20.6
         with:
           path: examples/go
           format: cyclonedx-json
@@ -150,7 +150,7 @@ jobs:
         run: bash scripts/generate-winget-manifest.sh "AgentProjectBootstrap.Template" "$(cat .template-version | tr -d '[:space:]')"
 
       - name: Generate provenance attestation
-        uses: actions/attest-build-provenance@0f67c3f4856b2e3261c31976d6725780e5e4c373 # v2.2.0
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v2.2.0
         with:
           subject-path: sbom.cyclonedx.json
 
