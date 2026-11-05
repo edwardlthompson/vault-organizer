@@ -15,6 +15,44 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.15.3](https://github.com/edwardlthompson/vault-organizer/compare/v0.15.2...v0.15.3) (2026-11-05)
+
+
+### Fixed
+
+* **ci:** gate Android jobs on stack-presence; drop CodeQL Android matrix ([bc26963](https://github.com/edwardlthompson/vault-organizer/commit/bc26963260afa927a2b7a9cdd87a0edb184b694e))
+* **ci:** skip pruned web/android jobs; gate on active stack ([a6ea885](https://github.com/edwardlthompson/vault-organizer/commit/a6ea88582ad736e0f6d9133724541aaecceb1bba))
+* **hygiene:** stop tracking ORT WASM and tokenizer.json (&gt;500KB) ([780e8d2](https://github.com/edwardlthompson/vault-organizer/commit/780e8d2d6be061bc2193fa90d7de9aaf49010dc3))
+* **security:** override sharp &gt;=0.35.0 for Trivy libvips CVEs ([191588e](https://github.com/edwardlthompson/vault-organizer/commit/191588e24d91f7d8af4889435c261f017cd1419f))
+
+
+### Changed
+
+* **argus:** Add canonical portfolio app icon ([b4b476d](https://github.com/edwardlthompson/vault-organizer/commit/b4b476d51efb42950ab06963544c55600134a679))
+* **argus:** Add missing parent-lineage marker files ([c3fad29](https://github.com/edwardlthompson/vault-organizer/commit/c3fad293047f6309756251cc4adcf77e5381abba))
+* **argus:** Add or improve a "What this is not" section ([10d2404](https://github.com/edwardlthompson/vault-organizer/commit/10d24040138e4c5d953babc2bf5d2af670504724))
+* **argus:** Bump .template-version toward parent ([7ee4a5b](https://github.com/edwardlthompson/vault-organizer/commit/7ee4a5bca0c697244037491dfcb6dc73fab1040f))
+* **argus:** Move agent memory/log files into .agent/ ([c492038](https://github.com/edwardlthompson/vault-organizer/commit/c492038c2015c40beda8cf436ae3c4620a5405e3))
+* **deps-dev:** Bump source-map-js from 1.2.1 to 1.2.2 in /examples/node ([d405f5b](https://github.com/edwardlthompson/vault-organizer/commit/d405f5bf25b7163118103de1bbf7103c911f3bd2))
+* **deps-dev:** Bump source-map-js from 1.2.1 to 1.2.2 in /plugin ([#22](https://github.com/edwardlthompson/vault-organizer/issues/22)) ([f8c1562](https://github.com/edwardlthompson/vault-organizer/commit/f8c15625630f7edd3d5ea5bd2fdc361fd5305876))
+* **deps-dev:** Bump vite from 7.3.6 to 7.3.7 in /plugin ([8500e1d](https://github.com/edwardlthompson/vault-organizer/commit/8500e1d51f9afb7c152dcc92e4d54c5d45364e50))
+* **deps-dev:** Bump vite from 8.2.2 to 8.3.5 in /examples/node ([#30](https://github.com/edwardlthompson/vault-organizer/issues/30)) ([3113432](https://github.com/edwardlthompson/vault-organizer/commit/3113432158bcf71d7bf57947c36ed6f321125cd0))
+* **deps:** Bump @hono/node-server in /examples/node ([#27](https://github.com/edwardlthompson/vault-organizer/issues/27)) ([09ab168](https://github.com/edwardlthompson/vault-organizer/commit/09ab168e15e7cb1f3d74025a38ae9977e5d6b482))
+* **deps:** Bump hono from 4.13.5 to 4.13.16 in /examples/node ([#28](https://github.com/edwardlthompson/vault-organizer/issues/28)) ([8c3c5e7](https://github.com/edwardlthompson/vault-organizer/commit/8c3c5e7c768773c2779afdf0f97c94b9d7a377d3))
+* **deps:** Bump hono in /examples/node in the node-dependencies group ([#4](https://github.com/edwardlthompson/vault-organizer/issues/4)) ([b291381](https://github.com/edwardlthompson/vault-organizer/commit/b2913815395e0e1cfbe7e99aafa5b5c7417e0194))
+* **deps:** Bump sharp from 0.35.3 to 0.35.5 in /plugin ([c5c7a77](https://github.com/edwardlthompson/vault-organizer/commit/c5c7a77c38b056fbd60b4c7b8f0bb729e4d1016d))
+* **deps:** Bump the node-dependencies group ([#1](https://github.com/edwardlthompson/vault-organizer/issues/1)) ([8ceabd8](https://github.com/edwardlthompson/vault-organizer/commit/8ceabd8d812c8bf2b9ab41a07c88cef882c3ce39))
+* **deps:** Bump the node-dependencies group ([#11](https://github.com/edwardlthompson/vault-organizer/issues/11)) ([fb5bf2b](https://github.com/edwardlthompson/vault-organizer/commit/fb5bf2b4fd198b652f845d54674ca74483fdebd7))
+* **deps:** Bump the node-dependencies group ([#5](https://github.com/edwardlthompson/vault-organizer/issues/5)) ([ecf22e8](https://github.com/edwardlthompson/vault-organizer/commit/ecf22e8dd0b5924c9bb30a73180955e194ac1e28))
+* **deps:** Bump the node-dependencies group ([#8](https://github.com/edwardlthompson/vault-organizer/issues/8)) ([e14f7f0](https://github.com/edwardlthompson/vault-organizer/commit/e14f7f06df1a008109cb95bc32bb84f379bcd4f9))
+* **deps:** Bump the node-dependencies group ([#9](https://github.com/edwardlthompson/vault-organizer/issues/9)) ([de4dc19](https://github.com/edwardlthompson/vault-organizer/commit/de4dc193e3e05e2a133f407c511b3548095598aa))
+* **release:** prepare v0.1.0 Vault Organizer initial publish ([828f776](https://github.com/edwardlthompson/vault-organizer/commit/828f776de8446be80cb199eaaa3906012bdcedc7))
+
+
+### Documentation
+
+* archive release 0.1.0 in COMPLETED_TASKS ([157907e](https://github.com/edwardlthompson/vault-organizer/commit/157907e9d822c042e30e72d23469e40cebf24ec0))
+
 ## [0.15.2](https://github.com/edwardlthompson/agent-project-bootstrap/compare/v0.15.1...v0.15.2) (2026-08-01)
 
 
