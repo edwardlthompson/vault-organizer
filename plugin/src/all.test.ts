@@ -676,3 +676,13 @@ describe("links", () => {
     expect(next).toContain("  - topic");
   });
 });
+
+describe("branding icon", () => {
+  it("exports Cluster Tree SVG for Obsidian addIcon", async () => {
+    const { VAULT_ORGANIZER_ICON_ID, VAULT_ORGANIZER_ICON_SVG } = await import("./icon");
+    expect(VAULT_ORGANIZER_ICON_ID).toBe("vault-organizer-cluster-tree");
+    expect(VAULT_ORGANIZER_ICON_SVG).toContain("currentColor");
+    expect(VAULT_ORGANIZER_ICON_SVG).toContain("<circle");
+    expect(VAULT_ORGANIZER_ICON_SVG.toLowerCase()).toContain("path");
+  });
+});

@@ -4,6 +4,7 @@ import {
   Plugin,
   TFile,
   TFolder,
+  addIcon,
   normalizePath,
   requestUrl,
   type PluginManifest,
@@ -19,6 +20,10 @@ import {
   type EmbedderStatus,
 } from "./embedder";
 import { probeHardware } from "./hardware";
+import {
+  VAULT_ORGANIZER_ICON_ID,
+  VAULT_ORGANIZER_ICON_SVG,
+} from "./icon";
 import { isExcluded, isUncategorized, shouldAutoApply, shouldWatchPath } from "./inbox";
 import { PreviewOrganizeModal, ProgressModal, RepairModelModal } from "./modals";
 import { ConcurrentQueue } from "./queue";
@@ -114,7 +119,8 @@ export default class VaultOrganizerPlugin extends Plugin {
     // Start automation poll before embedder load — ONNX init can take a long time.
     this.scheduleAutomationPoll();
 
-    this.addRibbonIcon("folder-tree", "Vault Organizer", async () => {
+    addIcon(VAULT_ORGANIZER_ICON_ID, VAULT_ORGANIZER_ICON_SVG);
+    this.addRibbonIcon(VAULT_ORGANIZER_ICON_ID, "Vault Organizer", async () => {
       await this.organizeActiveNote(true);
     });
 

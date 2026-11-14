@@ -1,5 +1,9 @@
 # Vault Organizer
 
+<p align="center">
+  <img src="branding/logo/cluster-tree.svg" alt="Vault Organizer logo" width="128" height="128" />
+</p>
+
 Offline Obsidian plugin that **auto-tags, categorizes, and folders** notes using a baked-in FOSS embedding sorter (**Snowflake arctic-embed-m**, Apache-2.0).
 
 No Ollama. No API keys. No cloud LLM. No Hugging Face downloads at runtime. **Desktop only** (local ONNX + Node filesystem).
@@ -20,6 +24,7 @@ pwsh scripts/vendor-model.ps1          # once — vendors ~105 MB ONNX into plug
 pwsh scripts/deploy-to-vault.ps1
 # Or your current vault:
 pwsh scripts/deploy-to-vault.ps1 -VaultPath "$env:USERPROFILE\Documents\My Notes"
+
 ```
 
 Then reload Obsidian (Ctrl+R) and enable it under **Installed plugins**.
@@ -61,6 +66,7 @@ pwsh ../scripts/vendor-model.ps1      # ONNX + tokenizer (gitignored)
 npm test
 npm run build
 pwsh ../scripts/deploy-to-vault.ps1
+
 ```
 
 ## Model pin & leapfrog CI
