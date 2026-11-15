@@ -51,3 +51,9 @@
 |--------|----------|-------|
 | Review 2026-08-05 | 2026-08-05 | COMPLETED_TASKS.md @ `828f776` |
 | Sprints 0–3 product build | 2026-08-05 | Features shipped; HUMAN release/listing remain |
+
+## News inbox (synced)
+
+P1/P2 tasks auto-synced by News Bot from [`docs/NEWS_INBOX.md`](docs/NEWS_INBOX.md).
+
+- 🔲 [AGENT][LOCAL] Audit the repo for wfx-loot IOCs — scope: .github/ (news P1, 2026-11-14) https://blog.gitguardian.com/wfx-loot-a-ci-secret-stealer-pushed-with-stolen-github-credentials/

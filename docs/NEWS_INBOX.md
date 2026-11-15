@@ -23,5 +23,5 @@ A Cursor planning agent should review these items and fold the useful ones into 
 
 **Tasks for the planning agent**
 
-- [ ] Audit the repo for wfx-loot IOCs — Checks for the wfx-docs branch/PR, .ci-*.sh files, build-audit-*.yml workflows and new npm lifecycle hooks, since the campaign steals CI secrets and Cursor credentials. Label: `[AGENT]` · Priority: P1 · https://blog.gitguardian.com/wfx-loot-a-ci-secret-stealer-pushed-with-stolen-github-credentials/
+- [x] Audit the repo for wfx-loot IOCs — Checks for the wfx-docs branch/PR, .ci-*.sh files, build-audit-*.yml workflows and new npm lifecycle hooks, since the campaign steals CI secrets and Cursor credentials. Label: `[AGENT]` · Priority: P1 · https://blog.gitguardian.com/wfx-loot-a-ci-secret-stealer-pushed-with-stolen-github-credentials/ (synced to BUILD_PLAN)
 - [ ] Plan the transformers.js 3.x to 4.x bump to pick up ONNX Runtime 1.32 — The plugin is a major behind; faster session start helps embedding indexing. Label: `[AGENT]` · Priority: P3 · https://github.com/microsoft/onnxruntime/releases/tag/v1.32.0
