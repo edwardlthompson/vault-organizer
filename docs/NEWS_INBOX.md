@@ -25,3 +25,13 @@ A Cursor planning agent should review these items and fold the useful ones into 
 
 - [x] Audit the repo for wfx-loot IOCs — Checks for the wfx-docs branch/PR, .ci-*.sh files, build-audit-*.yml workflows and new npm lifecycle hooks, since the campaign steals CI secrets and Cursor credentials. Label: `[AGENT]` · Priority: P1 · https://blog.gitguardian.com/wfx-loot-a-ci-secret-stealer-pushed-with-stolen-github-credentials/ (synced to BUILD_PLAN)
 - [ ] Plan the transformers.js 3.x to 4.x bump to pick up ONNX Runtime 1.32 — The plugin is a major behind; faster session start helps embedding indexing. Label: `[AGENT]` · Priority: P3 · https://github.com/microsoft/onnxruntime/releases/tag/v1.32.0
+
+## 2026-11-16
+
+**News and updates**
+
+- Obsidian Skills 1.1.0 (now obsidianmd/obsidian-skills) ships 7 agent skills as one plugin for Claude Code, Codex and Cursor, including obsidian-cli for plugin development against a running desktop app. [source](https://news.sulat.com/2026/11/15/obsidian-skills/) · [release](https://github.com/obsidianmd/obsidian-skills/releases/tag/1.1.0)
+
+**Tasks for the planning agent**
+
+- [ ] Add the Obsidian Skills Cursor plugin (obsidian-cli + obsidian-markdown) to the agent setup — Lets agents reload and test the plugin against a dev vault through the Obsidian CLI. Label: `[AGENT]` · Priority: P3 · https://github.com/obsidianmd/obsidian-skills/releases/tag/1.1.0
