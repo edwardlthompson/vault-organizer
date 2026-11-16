@@ -31,7 +31,10 @@ A Cursor planning agent should review these items and fold the useful ones into 
 **News and updates**
 
 - Obsidian Skills 1.1.0 (now obsidianmd/obsidian-skills) ships 7 agent skills as one plugin for Claude Code, Codex and Cursor, including obsidian-cli for plugin development against a running desktop app. [source](https://news.sulat.com/2026/11/15/obsidian-skills/) · [release](https://github.com/obsidianmd/obsidian-skills/releases/tag/1.1.0)
+- Correction after review: the 1.1.0 release has 6 skills; the 7th (obsidian-headless) is on main as 1.2.0, unreleased. Adopt obsidian-cli and obsidian-markdown for dev agents only; skip headless, defuddle, knap and json-canvas. [commit](https://github.com/obsidianmd/obsidian-skills/commit/398127736bd4ba42d767b1419fee1a927508370b)
 
 **Tasks for the planning agent**
 
-- [ ] Add the Obsidian Skills Cursor plugin (obsidian-cli + obsidian-markdown) to the agent setup — Lets agents reload and test the plugin against a dev vault through the Obsidian CLI. Label: `[AGENT]` · Priority: P3 · https://github.com/obsidianmd/obsidian-skills/releases/tag/1.1.0
+- [x] Add the Obsidian Skills Cursor plugin (obsidian-cli + obsidian-markdown) to the agent setup — Lets agents reload and test the plugin against a dev vault through the Obsidian CLI. Label: `[AGENT]` · Priority: P3 · https://github.com/obsidianmd/obsidian-skills/releases/tag/1.1.0 (superseded by the P2 tasks below)
+- [x] Install the official Obsidian Skills pack from the Cursor Marketplace and document the reload loop in AGENTS.md — User-level install, not vendored. Label: `[AGENT]` · Priority: P2 · https://github.com/obsidianmd/obsidian-skills/releases/tag/1.1.0 (synced to BUILD_PLAN)
+- [x] Add an agent convention so skills don't clobber plugin frontmatter or bypass link-safe moves — Preserve plugin properties and tags; use Obsidian move/rename. Label: `[AGENT]` · Priority: P2 · https://github.com/edwardlthompson/vault-organizer/blob/main/plugin/src/apply.ts (synced to BUILD_PLAN)
