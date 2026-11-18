@@ -38,3 +38,15 @@ A Cursor planning agent should review these items and fold the useful ones into 
 - [x] Add the Obsidian Skills Cursor plugin (obsidian-cli + obsidian-markdown) to the agent setup — Lets agents reload and test the plugin against a dev vault through the Obsidian CLI. Label: `[AGENT]` · Priority: P3 · https://github.com/obsidianmd/obsidian-skills/releases/tag/1.1.0 (superseded by the P2 tasks below)
 - [x] Install the official Obsidian Skills pack from the Cursor Marketplace and document the reload loop in AGENTS.md — User-level install, not vendored. Label: `[AGENT]` · Priority: P2 · https://github.com/obsidianmd/obsidian-skills/releases/tag/1.1.0 (synced to BUILD_PLAN)
 - [x] Add an agent convention so skills don't clobber plugin frontmatter or bypass link-safe moves — Preserve plugin properties and tags; use Obsidian move/rename. Label: `[AGENT]` · Priority: P2 · https://github.com/edwardlthompson/vault-organizer/blob/main/plugin/src/apply.ts (synced to BUILD_PLAN)
+
+## 2026-11-18
+
+Catch-up for Nov 17–18 (the daily brief did not run those mornings).
+
+**News and updates**
+
+- Obsidian Skills 1.2.0 is now released: it adds the Headless skill (Sync/Publish CLI; skip unless you have a paid subscription) and a Gemini CLI install path. The existing P2 to install the Cursor pack and keep plugin markers intact still applies. [source](https://github.com/obsidianmd/obsidian-skills/releases/tag/1.2.0)
+
+**Tasks for the planning agent**
+
+_No new tasks. See the news items above._
