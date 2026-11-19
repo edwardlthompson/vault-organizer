@@ -50,3 +50,13 @@ Catch-up for Nov 17–18 (the daily brief did not run those mornings).
 **Tasks for the planning agent**
 
 _No new tasks. See the news items above._
+
+## 2026-11-19
+
+**News and updates**
+
+- Microsoft made microsoft/onnxruntime and about 7 related repos private on Nov 17 "while we investigate malicious content", linked in time to the agent-framework PyPI compromise; the repo, tags and release downloads now return 404. PyPI/NuGet 1.32.0 and npm onnxruntime-web 1.31.1 still install, and no malicious code has been reported in them. A read-only check found this repo unaffected today (vendor-ort-wasm.ps1 copies from node_modules; no workflow downloads GitHub release assets). The ORT 1.32 link in the 11-14 entry now 404s; use https://pypi.org/project/onnxruntime/ or https://www.npmjs.com/package/onnxruntime-web instead. [source](https://www.theregister.com/security/2026/11/18/microsofts-official-python-agent-framework-hijacked-to-distribute-malware/5310858) · [impact rundown](https://codingislove.com/onnx-runtime-github-removed/)
+
+**Tasks for the planning agent**
+
+- [x] Freeze ONNX Runtime at the versions in plugin/package-lock.json (`npm ci` only) and hold the transformers.js 3→4 / ORT 1.32 bump until Microsoft clears the repos — an unexplained malicious-content investigation over the ORT source makes new ORT builds untrustworthy for now. Label: `[AGENT]` · Priority: P2 · https://www.theregister.com/security/2026/11/18/microsofts-official-python-agent-framework-hijacked-to-distribute-malware/5310858 (synced to BUILD_PLAN)
