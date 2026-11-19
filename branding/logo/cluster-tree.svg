@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Vault Organizer">
+  <!-- Cluster Tree  color lockup (slate + teal). Prefer mono for Obsidian ribbon. -->
+  <rect width="100" height="100" rx="18" fill="#E8EEF0"/>
+  <g fill="none" stroke="#1C2B33" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+    <!-- cluster edges -->
+    <path d="M28 28 L36 36 L28 48 L22 40 Z"/>
+    <path d="M36 36 L44 30"/>
+    <path d="M36 36 L46 44"/>
+    <path d="M28 48 L38 54"/>
+    <path d="M22 40 L18 52"/>
+    <path d="M44 30 L50 40 L46 44"/>
+    <path d="M38 54 L50 40"/>
+    <!-- trunk to folders -->
+    <path d="M50 40 H58"/>
+    <path d="M58 40 V28 H64"/>
+    <path d="M58 40 H64"/>
+    <path d="M58 40 V52 H64"/>
+    <!-- folders -->
+    <path d="M66 22 h8 l3 3 h15 v14 H66 Z"/>
+    <path d="M66 40 h8 l3 3 h15 v14 H66 Z"/>
+    <path d="M66 58 h8 l3 3 h15 v14 H66 Z"/>
+  </g>
+  <!-- slate nodes -->
+  <g fill="#1C2B33">
+    <circle cx="28" cy="28" r="3.4"/>
+    <circle cx="36" cy="36" r="3.4"/>
+    <circle cx="28" cy="48" r="3.4"/>
+    <circle cx="22" cy="40" r="3.2"/>
+    <circle cx="50" cy="40" r="3.4"/>
+  </g>
+  <!-- teal accent nodes -->
+  <g fill="#0D9488">
+    <circle cx="44" cy="30" r="3.4"/>
+    <circle cx="46" cy="44" r="3.4"/>
+    <circle cx="38" cy="54" r="3.4"/>
+  </g>
+</svg>

@@ -38,3 +38,11 @@
 - **Status:** Accepted
 - **Decision:** Weekly CI scores FOSS embedder candidates; human-approved pin changes only.
 - **Consequences:** `models/LEADERBOARD.md` + issues when leapfrog detected.
+
+## ADR-006: Cluster Tree logo mark
+
+- **Date:** 2026-10-07
+- **Status:** Accepted
+- **Context:** Needed a product icon for README and Obsidian ribbon; four concepts reviewed under `branding/concepts/`.
+- **Decision:** Adopt **Cluster Tree** (embedding nodes consolidating into folders). Color SVG + mono `currentColor` SVG in `branding/logo/`; ribbon via `addIcon` in `plugin/src/icon.ts`.
+- **Consequences:** Lucide `folder-tree` ribbon replaced; concept archive retained for history.
