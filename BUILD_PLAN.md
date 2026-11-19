@@ -90,3 +90,18 @@ _No open Dependabot or Release Please PRs._
 _No template gaps._
 <!-- template-gaps-sync:end -->
 
+<!-- argus-portfolio-chores:start -->
+## Argus portfolio chores
+
+Synced from argus-runner (2026-11-18). Prefer YOLO maintain on the runner; keep these until cleared.
+
+| Status | Venue | Task |
+|--------|-------|------|
+| 🔲 | `[AUTO][CLOUD]` | Clear open Dependabot alerts |
+
+```text
+Repo: edwardlthompson/vault-organizer
+Squash-merge green Dependabot PRs.
+Gate: Dependabot alert count 0.
+```
+<!-- argus-portfolio-chores:end -->
