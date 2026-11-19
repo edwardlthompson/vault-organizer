@@ -50,6 +50,17 @@
 | ✅ | [AUTO] Weekly score job + leapfrog issues |
 | 🔲 | [HUMAN] Approve any pin change in MANIFEST.json |
 
+## Child Repo Playbook
+
+### Sprint News — News Bot follow-ups
+
+<!-- parallel_exception: independent news follow-ups; run sequentially -->
+
+1. 🔲 [AGENT] Audit the repo for wfx-loot IOCs — scope: .github/ (news P1, 2026-11-14) https://blog.gitguardian.com/wfx-loot-a-ci-secret-stealer-pushed-with-stolen-github-credentials/
+2. 🔲 [AGENT] Install the official Obsidian Skills pack from the Cursor Marketplace (user-level, not vendored into `.cursor/skills/`) and document the dev reload loop: run `scripts/deploy-to-vault.ps1`, then `obsidian plugin:reload id=vault-organizer`, then check `dev:errors` / `dev:console` / `dev:screenshot` — scope: AGENTS.md, docs/CURSOR_INTEGRATIONS.md (news P2, 2026-11-16) https://github.com/obsidianmd/obsidian-skills/releases/tag/1.1.0
+3. 🔲 [AGENT] Add an agent convention so Obsidian skills never clobber plugin frontmatter or bypass link-safe moves: preserve `vault-organizer`, `vault-organizer-dead-links`, `#manual-sort`, `#has-dead-links`; move/rename via `obsidian move`/`rename` or the plugin apply path, never filesystem `mv`; note headless, defuddle, knap and json-canvas as out of scope — scope: AGENTS.md or .cursor/rules/ (news P2, 2026-11-16) https://github.com/edwardlthompson/vault-organizer/blob/main/plugin/src/apply.ts
+
+
 ## Archived Sprints
 
 | Sprint | Complete | Notes |
@@ -61,9 +72,7 @@
 Standing queue for This Computer. Rows: `🔲 [AGENT][LOCAL] … — scope: path`.
 
 <!-- local-agent-lane:begin -->
-- 🔲 [AGENT][LOCAL] Audit the repo for wfx-loot IOCs — scope: .github/ (news P1, 2026-11-14) https://blog.gitguardian.com/wfx-loot-a-ci-secret-stealer-pushed-with-stolen-github-credentials/
-- 🔲 [AGENT][LOCAL] Install the official Obsidian Skills pack from the Cursor Marketplace (user-level, not vendored into `.cursor/skills/`) and document the dev reload loop: run `scripts/deploy-to-vault.ps1`, then `obsidian plugin:reload id=vault-organizer`, then check `dev:errors` / `dev:console` / `dev:screenshot` — scope: AGENTS.md, docs/CURSOR_INTEGRATIONS.md (news P2, 2026-11-16) https://github.com/obsidianmd/obsidian-skills/releases/tag/1.1.0
-- 🔲 [AGENT][LOCAL] Add an agent convention so Obsidian skills never clobber plugin frontmatter or bypass link-safe moves: preserve `vault-organizer`, `vault-organizer-dead-links`, `#manual-sort`, `#has-dead-links`; move/rename via `obsidian move`/`rename` or the plugin apply path, never filesystem `mv`; note headless, defuddle, knap and json-canvas as out of scope — scope: AGENTS.md or .cursor/rules/ (news P2, 2026-11-16) https://github.com/edwardlthompson/vault-organizer/blob/main/plugin/src/apply.ts
+_No local agent items._
 <!-- local-agent-lane:end -->
 
 ### Cloud agent (Cursor Cloud)
