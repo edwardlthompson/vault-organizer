@@ -73,3 +73,10 @@ Pinned pack: `models/MANIFEST.json` → `arctic-embed-m`. Weekly workflow refres
 - Default model weights: Apache-2.0 (Snowflake arctic-embed-m) — see `THIRD_PARTY_LICENSES.md`
 
 Inspired by patterns in [Note Companion](https://github.com/nexus-jpf/note-companion) (MIT); this is a rewrite, not a fork.
+
+## What this is not
+
+- A finished commercial product promise
+- A place for secrets or production credentials
+- An unbounded scope — see README goals above
+
