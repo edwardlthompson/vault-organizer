@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "project_name": "vault-organizer",
+  "purpose": "Offline Obsidian plugin: local FOSS embeddings to auto-tag, categorize, and folder notes",
+  "stack": "web",
+  "license": "MIT",
+  "distribution_tier": "foss",
+  "parent_template": "edwardlthompson/agent-project-bootstrap",
+  "parent_version": "1.13.1",
+  "agent_adapters": {
+    "cursor_rules": true,
+    "claude": true,
+    "copilot": true,
+    "gemini": true,
+    "cline": true
+  },
+  "security": {
+    "dependabot": true,
+    "code_scanning": true,
+    "secret_detection": true
+  }
+}
