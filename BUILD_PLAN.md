@@ -1,5 +1,10 @@
 # Build Plan — Vault Organizer
 
+<!-- remaining-tally -->
+**Remaining:** (tally on next sync)
+<!-- /remaining-tally -->
+
+
 > Owner labels: `AGENT` / `HUMAN` / `ADB` / `AUTO`. Status: 🔲 open · ✅ done · ❌ blocked
 >
 > **Review sprint — 2026-08-05 audit** archived in COMPLETED_TASKS.md @ `828f776`.
@@ -45,9 +50,68 @@
 | ✅ | [AUTO] Weekly score job + leapfrog issues |
 | 🔲 | [HUMAN] Approve any pin change in MANIFEST.json |
 
+## Child Repo Playbook
+
+### Sprint News — News Bot follow-ups
+
+<!-- parallel_exception: independent news follow-ups; run sequentially -->
+
+1. 🔲 [AGENT] Audit the repo for wfx-loot IOCs — scope: .github/ (news P1, 2026-11-14) https://blog.gitguardian.com/wfx-loot-a-ci-secret-stealer-pushed-with-stolen-github-credentials/
+2. 🔲 [AGENT] Install the official Obsidian Skills pack from the Cursor Marketplace (user-level, not vendored into `.cursor/skills/`) and document the dev reload loop: run `scripts/deploy-to-vault.ps1`, then `obsidian plugin:reload id=vault-organizer`, then check `dev:errors` / `dev:console` / `dev:screenshot` — scope: AGENTS.md, docs/CURSOR_INTEGRATIONS.md (news P2, 2026-11-16) https://github.com/obsidianmd/obsidian-skills/releases/tag/1.1.0
+3. 🔲 [AGENT] Add an agent convention so Obsidian skills never clobber plugin frontmatter or bypass link-safe moves: preserve `vault-organizer`, `vault-organizer-dead-links`, `#manual-sort`, `#has-dead-links`; move/rename via `obsidian move`/`rename` or the plugin apply path, never filesystem `mv`; note headless, defuddle, knap and json-canvas as out of scope — scope: AGENTS.md or .cursor/rules/ (news P2, 2026-11-16) https://github.com/edwardlthompson/vault-organizer/blob/main/plugin/src/apply.ts
+4. 🔲 [AGENT] Freeze ONNX Runtime at the plugin/package-lock.json versions (`npm ci` only) and hold the transformers.js 3→4 / ORT 1.32 bump until Microsoft clears the private microsoft/onnxruntime repos — scope: plugin/package.json,plugin/package-lock.json (news P2, 2026-11-19) https://www.theregister.com/security/2026/11/18/microsofts-official-python-agent-framework-hijacked-to-distribute-malware/5310858
+
+### Local agent (This Computer)
+
+Standing queue for This Computer. Rows: `🔲 [AGENT][LOCAL] … — scope: path`.
+
+<!-- local-agent-lane:begin -->
+_No local agent items._
+<!-- local-agent-lane:end -->
+
+### Cloud agent (Cursor Cloud)
+
+Standing queue for Cursor Cloud. Rows: `🔲 [AGENT][CLOUD] … — scope: path`.
+
+<!-- cloud-agent-lane:begin -->
+_No cloud agent items._
+<!-- cloud-agent-lane:end -->
+
 ## Archived Sprints
 
 | Sprint | Complete | Notes |
 |--------|----------|-------|
 | Review 2026-08-05 | 2026-08-05 | COMPLETED_TASKS.md @ `828f776` |
 | Sprints 0–3 product build | 2026-08-05 | Features shipped; HUMAN release/listing remain |
+
+### Open PRs (synced)
+
+> Auto-managed. Do not hand-edit inside the markers.
+
+<!-- open-prs-sync:begin -->
+_No open Dependabot or Release Please PRs._
+<!-- open-prs-sync:end -->
+
+### Template gaps (synced)
+
+> Auto-managed. Do not hand-edit inside the markers.
+
+<!-- template-gaps-sync:begin -->
+_No template gaps._
+<!-- template-gaps-sync:end -->
+
+<!-- argus-portfolio-chores:start -->
+## Argus portfolio chores
+
+Synced from argus-runner (2026-11-18). Prefer YOLO maintain on the runner; keep these until cleared.
+
+| Status | Venue | Task |
+|--------|-------|------|
+| 🔲 | `[AUTO][CLOUD]` | Clear open Dependabot alerts |
+
+```text
+Repo: edwardlthompson/vault-organizer
+Squash-merge green Dependabot PRs.
+Gate: Dependabot alert count 0.
+```
+<!-- argus-portfolio-chores:end -->
