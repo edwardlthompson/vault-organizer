@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/node": "^22.13.10",
     "builtin-modules": "^4.0.0",
-    "esbuild": "^0.25.1",
+    "esbuild": "^0.28.2",
     "obsidian": "^1.8.7",
     "tsx": "^4.23.7",
     "typescript": "^5.8.2",
@@ -30,10 +30,5 @@
   },
   "dependencies": {
     "@huggingface/transformers": "^3.4.2"
-  },
-  "overrides": {
-    "sharp": ">=0.35.0",
-    "@vitest/mocker": ">=4.1.12",
-    "tinypool": ">=2.1.2"
   }
 }
