@@ -60,3 +60,9 @@ _No new tasks. See the news items above._
 **Tasks for the planning agent**
 
 - [x] Freeze ONNX Runtime at the versions in plugin/package-lock.json (`npm ci` only) and hold the transformers.js 3→4 / ORT 1.32 bump until Microsoft clears the repos — an unexplained malicious-content investigation over the ORT source makes new ORT builds untrustworthy for now. Label: `[AGENT]` · Priority: P2 · https://www.theregister.com/security/2026/11/18/microsofts-official-python-agent-framework-hijacked-to-distribute-malware/5310858 (synced to BUILD_PLAN)
+
+## 2026-11-25
+
+**News and updates**
+
+- Obsidian Skills 1.2.1 (Nov 20, after that morning's brief) declared the `skills/` folder in the Cursor manifest so the pack loads in Grok Bot, and 1.2.2 (Nov 25) makes Obsidian an official Claude plugin plus two skill tweaks: Headless now asks before a vault's first sync, and Defuddle treats extracted pages as data, not instructions. The existing Marketplace-install and frontmatter-convention rows on the board still cover the work; this is a version note. [1.2.1](https://github.com/obsidianmd/obsidian-skills/releases/tag/1.2.1) · [1.2.2](https://github.com/obsidianmd/obsidian-skills/releases/tag/1.2.2)
